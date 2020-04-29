@@ -1,0 +1,12 @@
+data<-read.csv(file.choose())
+head(data)
+to_merge<-data.frame(Country_Code,Life_Expectancy_At_Birth_1960,Life_Expectancy_At_Birth_2013)
+head(to_merge)
+head(data)
+x<-merge(data,to_merge,by.x="Country.Code",by.y="Country_Code")
+head(x)
+head(x$Fertility.Rate)
+qplot(data=x,x=Life_Expectancy_At_Birth_1960,y=Fertility.Rate,alpha=0.2,size=I(3),colour=Country.Code)
+nin<-to_merge$Life_Expectancy_At_Birth_1960
+nin<-data.fram
+qplot(data=x,x=Life_Expectancy_At_Birth_1960,y=Fertility.Rate,alpha=0.2,size=I(3),colour=Country.Code)
